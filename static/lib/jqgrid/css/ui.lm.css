@@ -1,0 +1,32 @@
+/* 
+    Created on : 2015-9-19, 19:59:16
+    Author     : allen <blog.rc5j.cn>
+*/
+
+.ui-jqgrid-view > .ui-jqgrid-titlebar {
+    height: 40px;
+    line-height: 24px;
+    color: #FFF;
+    background: #307ECC none repeat scroll 0% 0%;
+    padding: 0px;
+    font-size: 15px;
+}
+
+.ui-jqgrid .ui-jqgrid-labels {
+    border-bottom: medium none;
+    background: #F2F2F2 linear-gradient(to bottom, #F8F8F8 0%, #ECECEC 100%) repeat-x scroll 0% 0%;
+    padding: 0px !important;
+    border-left: 1px solid #E1E1E1 !important;
+}
+
+.ui-jqgrid .ui-jqgrid-hbox {
+    float: left;
+    padding-right: 20px;
+}
+
+.ui-jqgrid .ui-jqgrid-hdiv {
+    font-weight: bold;
+    color: #777;
+    text-shadow: none;
+    line-height: 15px;
+}

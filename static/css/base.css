@@ -1,0 +1,317 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-9-18, 16:41:29
+    Author     : Administrator
+*/
+
+body{
+    /*padding-top: 50px;*/
+}
+.mt10{
+    margin-top: 10px;
+}
+
+/*顶部菜单*/
+.navbar{
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+#pagetop-btn .btn{
+    width:47px;
+    height: 40px;
+    border-radius:0px;
+    margin:1px;
+    line-height: 40px;
+}
+#pagetop-btn .btn:last-child{
+    margin-right: 0px;
+}
+#left-bar{
+    background: #F2F2F2;
+    float: left;
+    overflow-y: auto;
+}
+.menu > .nav > li > .nav {
+    display: none;
+    background-color:#ffffff;
+}
+.navbar .badge-notes {
+    float: right;
+    margin-left: -15px;
+    margin-top: -6px;
+    position: relative;
+    font-size: 11px;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #FFF;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #999;
+    border-radius: 10px;
+}
+.btn-danger, .bg-danger, .btn-danger.btn-circle > i {
+    color: #FFF;
+    background-color: #FF5F5F;
+}
+.icon-xlarge{
+    font-size: 19px;
+}
+.thumb-small {
+    margin: 0px 4px;
+    vertical-align: baseline;
+    width: 40px;
+}
+.avatar {
+    border-radius: 500px;
+    background-color: #FFF;
+    padding: 2px;
+}
+.inline{
+    display: inline-block;
+}
+.thumb img, .thumb-mini img, .thumb-small img, .thumb-large img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.navbar-avatar > li > a {
+    padding: 5px 10px;
+}
+
+/*登录页*/
+.login-container{
+    margin-top: 10px;
+}
+.alert{
+    padding: 0px;
+    margin-bottom: 0px;
+}
+/*主内容区*/
+#main-content{
+    margin-left:200px;
+    overflow-y: auto;
+}
+#page-content{
+    padding: 8px 20px 24px;
+}
+#breadcrumb{
+    position: relative;
+    z-index: auto;
+    border-bottom: 1px solid #E5E5E5;
+    background-color: #F5F5F5;
+    min-height: 41px;
+    line-height: 40px;
+    padding: 0px 12px 0px 0px;
+}
+.breadcrumb{
+    padding:0px 20px;
+    margin-bottom:0px;
+    list-style: outside none none;
+    border-radius: 0px;
+}
+
+/*页标题*/
+.page-header{
+   border-bottom: 1px dotted #E2E2E2;
+   margin:10px 20px auto 20px;
+}
+
+/*主页区*/
+.infobox {
+    display: inline-block;
+    width: 210px;
+    height: 66px;
+    color: #555;
+    background-color: #FFF;
+    box-shadow: none;
+    border-radius: 0px;
+    margin: -1px 0px 0px -1px;
+    padding: 8px 3px 6px 9px;
+    border-width: 1px;
+    border-style: dotted;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-color: #D8D8D8 !important;
+    vertical-align: middle;
+    text-align: left;
+    position: relative;
+}
+.infobox-green{
+    color: #9ABC32;
+}
+.infobox-blue{
+    color: #6FB3E0;
+}
+
+.infobox > .infobox-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 44px;
+}
+
+.infobox > .infobox-icon > .icon {
+    display: inline-block;
+    height: 42px;
+    margin: 0px;
+    padding: 1px 1px 0px 2px;
+    background-color: transparent;
+    border-width: 0px;
+    text-align: center;
+    position: relative;
+    border-radius: 100%;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+    font-size: 42px;
+}
+
+.infobox > .infobox-data {
+    display: inline-block;
+    border-width: 0px;
+    font-size: 13px;
+    text-align: left;
+    line-height: 21px;
+    min-width: 130px;
+    padding-left: 8px;
+    position: relative;
+    top: 0px;
+}
+
+.infobox > .stat.stat-success {
+    color: #77C646;
+}
+.infobox > .stat {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 11px;
+    text-shadow: none;
+    color: #ABBAC3;
+    font-size: 13px;
+    font-weight: bold;
+    padding-right: 18px;
+    padding-top: 3px;
+}
+.infobox > .stat i{
+    display: inline-block;
+    font-weight:  bolder;
+    font-size: 22px;
+    margin-left: 5px;
+}
+
+/*datatables样式冲突*/
+.dataTables_wrapper .form-control{
+    width: auto;
+}
+
+/*统计页*/
+.chart-bar .icon{
+    font-size: 15px;
+}
+/*颜色*/
+.green{
+    color: #6FB3E0;
+}
+.red{
+    color:#FF5F5F;
+}
+
+/*dropzone.js*/
+.dropzone img{
+    width:  130px;
+    height: 130px;
+}
+.dropzone {
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.dropzone .dz-default.dz-message {
+  background-image: none;
+  font-size: 24px;
+  text-align: center;
+  line-height: 32px;
+  left: 0;
+  width: 100%;
+  margin-left: auto;
+}
+.dropzone .dz-default.dz-message span {
+  display: inline;
+  color: #555;
+}
+.dropzone .dz-default.dz-message span .upload-icon {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  margin-top: 8px;
+  cursor: pointer;
+}
+.dropzone .dz-default.dz-message span .upload-icon:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.dropzone .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark,
+.dropzone .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
+  text-align: center;
+  line-height: 35px;
+}
+.dropzone .dz-preview .dz-error-mark:before,
+.dropzone-previews .dz-preview .dz-error-mark:before {
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #DB6262;
+  content: "\f00d";
+}
+.dropzone .dz-preview .dz-success-mark:before,
+.dropzone-previews .dz-preview .dz-success-mark:before {
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #6DA552;
+  content: "\f00c";
+}
+.dropzone a.dz-remove,
+.dropzone-previews a.dz-remove {
+  border: none;
+  border-radius: 0;
+  color: #FFF;
+  background: #D15B47;
+  cursor: pointer;
+}
+.dropzone a.dz-remove:hover,
+.dropzone-previews a.dz-remove:hover {
+  color: #FFF;
+  background: #B74635;
+}
+.dropzone .progress,
+.dropzone-previews .progress {
+  margin-bottom: 0;
+}
+.dropzone .dz-preview.dz-success .progress,
+.dropzone-previews .dz-preview.dz-success .progress,
+.dropzone .dz-preview.dz-error .progress,
+.dropzone-previews .dz-preview.dz-error .progress {
+  display: none;
+}
+
+.input-img{
+    /*height: 270px;*/
+}
+.input-img img{
+    width: 250px;
+    height:250px;
+}

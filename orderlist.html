@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>zui_demo</title>
+        <!-- zui -->
+        <link href="/static/zui/css/zui.min.css" rel="stylesheet">
+        <link href="/static/zui/lib/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+        <link href="/static/css/base.css" rel="stylesheet">
+        <!--jqgrid-->
+        <link rel="stylesheet" type="text/css" href="/static/lib/jqgrid/css/ui.jqgrid.css">
+        <link rel="stylesheet" type="text/css" href="/static/lib/jqgrid/css/ui.ace.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-inverse " role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">灸疗店铺管理系统</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-collapse-example">
+                    <ul class="nav navbar-nav navbar-avatar navbar-right">
+                        <li>
+                            <a href="/shop/order/orderList" class="header-tooltip"  style="margin-top:8px;" data-toggle="tooltip"
+                               data-placement="bottom" data-container="body" title="" data-original-title= "4条未处理订单">
+                                <i style="font-size: 25px;" class="icon-shopping-cart icon-xlarge text-default"></i>
+                                <b style="display: block;" class="badge badge-notes bg-default count-n">4</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/shop/user/message" class="header-tooltip" style="margin-top:8px;" data-toggle="tooltip"
+                               data-placement="bottom" data-container="body" title="" data-original-title= "2条未读信息">
+                                <i  style="font-size: 25px;" class="icon-comment-alt icon-xlarge text-default"></i>
+                                <b style="display: block;" class="badge badge-notes bg-danger count-n">2</b>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">曹麦穗
+                                <span class="thumb-small avatar inline">
+                                    <img src="/static/Images/avatar/avatar.jpg" alt="Mika Sokeil" class="img-circle">
+                                </span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/shop/index/loginOut.html"><i class="icon icon-off"></i> 注销</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </header>
+        <!-- / header -->
+        <div id="left-bar" style="width: 200px">
+            <nav class="menu" id="left-menu"  data-toggle="menu" >
+                <ul class="nav nav-primary">
+                    <li><a href="/index.php?/shop/index/index"><i class="icon-home"></i> 主面板</a></li>
+                    <li><a href="#"><i class="icon-user"></i>我的店铺</a>
+                        <ul class="nav">
+                            <li >
+                                <a href=""><i class="icon-shopping-cart"></i>menu_1</a>
+                            </li>
+                            <li >
+                                <a href=""><i class="icon-shopping-cart"></i>menu_2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon-yen"></i>资金管理</a>
+                        <ul class="nav">
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon-dashboard"></i>工作中心</a>
+                        <ul class="nav">
+                            <li class="active" >
+                                <a href="orderlist.html"><i class="icon-shopping-cart"></i>订单管理</a>
+                            </li>
+                            <li >
+                                <a href=""><i class="icon-shopping-cart"></i>收银开单</a>
+                            </li>
+                            <li >
+                                <a href=""><i class="icon-line-chart"></i>交易统计</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-comments-alt"></i>评论管理</a>
+                        <ul class="nav">
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-tasks"></i> 消息中心
+                            <span class="label label-badge label-danger pull-right">2</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main-content">
+            <div id="breadcrumb">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href=""><i class="icon icon-home"></i> 主页</a>
+                    </li>
+                    <li>
+                        <a id="parent-bread" href="#">工作中心</a>
+                    </li>
+                    <li id="children-bread" class="active">店铺管理</li>
+                </ul>
+            </div>
+            <div id="page-content">
+                <div class="page-header" >
+                    <h1>
+                        店铺管理
+                    </h1>
+                </div>
+                <div class="col-xs-12">
+                    <table id="list"><tr><td></td></tr></table> 
+                    <div id="pager"></div> 
+                </div>
+                <div class="col-xs-12">
+                    <table class="table table-datatable table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>时间</th>
+                                <th>时间</th>
+                                <th>时间</th>
+                                <th>时间</th>
+                                <th>时间</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr data-index="0" data-id="0" class="">
+                                <td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="0" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101046</td><td data-row="0" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 08:13:41</td><td data-row="0" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">Z431</td><td data-row="0" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;">Catouse</td><td data-row="0" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">上网</td></tr><tr data-index="1" data-id="1" class=""><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="1" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101047</td><td data-row="1" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 08:07:06</td><td data-row="1" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">B008</td><td data-row="1" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">行者孙</td><td data-row="1" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">自言自语</td></tr><tr class="active" data-index="2" data-id="2"><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="2" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101048</td><td data-row="2" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 07:31:01</td><td data-row="2" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">Z000</td><td data-row="2" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">行者孙</td><td data-row="2" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">搬动椅子</td></tr><tr data-index="3" data-id="3" class=""><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="3" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101049</td><td data-row="3" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 06:54:50</td><td data-row="3" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">B008</td><td data-row="3" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">绿巨人</td><td data-row="3" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">唱歌</td></tr><tr data-index="4" data-id="4" class=""><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="4" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101050</td><td data-row="4" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 06:46:30</td><td data-row="4" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">B487</td><td data-row="4" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">奥特曼</td><td data-row="4" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">喝水</td></tr></tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 在此处挥洒你的创意 -->
+        <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+        <script src="/static/js/jquery.js"></script>
+        <!-- ZUI Javascript组件 -->
+        <script src="/static/zui/js/zui.min.plus.js"></script>
+        <script src="/static/zui/lib/datetimepicker/datetimepicker.min.js"></script>
+        <script src="/static/lib/layer/layer.js"></script>
+        <script src="/static/shop/js/global.js"></script>
+        <script>
+            $(function () {
+                $('#left-bar').add('#main-content').height($(window).height() - $('header').height());
+                $('.header-tooltip').tooltip();
+                $('#left-menu ul.nav-primary ul.nav li.active').parents('li').addClass('active show');
+            });
+        </script>
+        <script src="/static/lib/jqgrid/js/jquery.jqGrid.min.js"></script>
+        <script src="/static/lib/jqgrid/js/i18n/grid.locale-cn.js"></script>
+        <script>
+            $(function () {
+                $("#list").jqGrid({
+                    url: "getOrderList.php",
+                    datatype: "json",
+                    mtype: "POST",
+                    colNames: ["订单编号", "下单日期", "服务名", "预约类型", "原价", "实付款", "状态", "",
+                        "操作", '备注', '用户', "电话", "预约时间", '客户地址'],
+                    colModel: [
+                        {name: "orderNo", editable: true, width: 80},
+                        {name: "ctime", editable: true, width: 50},
+                        {name: "name", width: 40, editable: true, align: "center"},
+                        {name: "isVisitStr", width: 30, editable: true, align: "center"},
+                        {name: "price", width: 30, editable: true, align: "center"},
+                        {name: "amount", width: 30, hidden: false, align: "center", editable: true, edittype: 'text'},
+                        {name: "statusText", width: 50, editable: true, align: "center"},
+                        {name: "actionLoc", viewable: false, width: 30, formatter: "actions"},
+                        {name: "actionBtn", viewable: false, width: 50, sortable: false, formatter: actionFormatrer},
+                        {name: "remark", hidden: true, editable: true, editrules: {edithidden: true}},
+                        {name: "nick", hidden: true, editable: true, editrules: {edithidden: true}},
+                        {name: "tel", hidden: true, editable: true, editrules: {edithidden: true}},
+                        {name: "serviceTime", hidden: true, editable: true, editrules: {edithidden: true}},
+                        {name: "address", hidden: true, editable: true, editrules: {edithidden: true}},
+                    ],
+                    pager: "#pager",
+                    rowNum: 10,
+                    rowList: [10, 20, 30],
+                    sortname: "ctime",
+                    sortorder: "desc",
+                    viewrecords: true,
+                    gridview: true,
+                    autoencode: true,
+                    caption: '订单列表',
+                    autowidth: true,
+                    height: 'auto',
+                    rownumbers: true,
+                    jsonReader: {
+                        root: "rows",
+                        page: "page",
+                        total: "total",
+                        records: "records",
+                        repeatitems: false,
+                        id: "0"
+                    },
+                }).navGrid('#pager', {edit: true, add: true, del: true, view: true}, searchFn, editFn, addFn, delFn, viewFn);
+            });
+            var searchFn = {
+            };
+            var editFn = {
+                jqModal: true,
+                reloadAfterSubmit: true,
+                closeOnEscape: true,
+                savekey: [true, 13],
+                closeAfterEdit: true,
+                url: '',
+                beforeShowForm: function (form) {
+                    $('#tr_password', form).hide();
+                },
+                afterSubmit: function (response) {
+                    var responseText = $.parseJSON(response.responseText);
+                    var success = responseText.success;
+                    var message = responseText.message;
+                    return [success, message];
+                }
+            };
+            function edit() {
+
+            }
+            ;
+            function addFn() {
+                console.log('add');
+            }
+            function delFn() {
+                console.log('add');
+            }
+            function viewFn() {
+                console.log('view');
+            }
+
+            function actionFormatrer(cellvalue, options, rowObject) {
+                var response = '';
+                if (rowObject.statusText === '申请退款') {
+                    response = '<a  onClick="rebackPay(' + rowObject.id + ')" class="label grid-btn label-badge label-danger">确认退款</a>';
+                    response += '<a onClick="refuseFn(' + rowObject.id + ')" class="label grid-btn label-badge label-danger">拒绝退款</a>';
+                }
+                if (rowObject.statusText === '已评价') {
+                    response = '<a class="label grid-btn label-badge label-danger">查看评价</a>';
+                }
+                return response;
+            }
+
+            function refuseFn(id) {
+                //拒绝退款
+                $('#refuse-order-id').val(id);
+                $('#refundModal').modal({show: true});
+            }
+            function rebackPay(id) {
+                //确认退款
+                layer.confirm('确定确认退款？', {
+                    btn: ['确认', '取消'] //按钮
+                }, function () {
+                    //确认退款
+                    $.ajax({
+                        url: '/shop/order/rebackPay',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {id: id},
+                        success: function (res) {
+                            layer.msg(res.msg, {icon: 1});
+                        }
+                    });
+                }, function () {
+                    // layer.msg('奇葩么么哒', {shift: 6});
+                });
+            }
+        </script>
+        <script>
+            $(function () {
+                $('table.datatable').datatable({checkable: true, sortable: true});
+            });
+        </script>
+    </body>
+</html>
