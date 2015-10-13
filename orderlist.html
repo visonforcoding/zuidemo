@@ -132,21 +132,6 @@
                     <table id="list"><tr><td></td></tr></table> 
                     <div id="pager"></div> 
                 </div>
-                <div class="col-xs-12">
-                    <table class="table table-datatable table-hover">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>时间</th>
-                                <th>时间</th>
-                                <th>时间</th>
-                                <th>时间</th>
-                                <th>时间</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr data-index="0" data-id="0" class="">
-                                <td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="0" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101046</td><td data-row="0" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 08:13:41</td><td data-row="0" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">Z431</td><td data-row="0" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;">Catouse</td><td data-row="0" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">上网</td></tr><tr data-index="1" data-id="1" class=""><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="1" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101047</td><td data-row="1" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 08:07:06</td><td data-row="1" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">B008</td><td data-row="1" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">行者孙</td><td data-row="1" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">自言自语</td></tr><tr class="active" data-index="2" data-id="2"><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="2" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101048</td><td data-row="2" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 07:31:01</td><td data-row="2" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">Z000</td><td data-row="2" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">行者孙</td><td data-row="2" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">搬动椅子</td></tr><tr data-index="3" data-id="3" class=""><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="3" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101049</td><td data-row="3" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 06:54:50</td><td data-row="3" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">B008</td><td data-row="3" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">绿巨人</td><td data-row="3" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">唱歌</td></tr><tr data-index="4" data-id="4" class=""><td class="check-row check-btn" data-index="check"><i class="icon-check-empty"></i></td><td class="text-center" data-row="4" data-index="0" data-flex="false" data-type="number" style="width: 100px; min-height: 37px; height: 37px;">101050</td><td data-row="4" data-index="1" data-flex="false" data-type="date" style="width: 160px; min-height: 37px; height: 37px;">2015-10-13 06:46:30</td><td data-row="4" data-index="2" data-flex="false" data-type="string" style="width: 80px; min-height: 37px; height: 37px;">B487</td><td data-row="4" data-index="3" data-flex="false" data-type="string" style="width: 100px; min-height: 37px; height: 37px;" class="">奥特曼</td><td data-row="4" data-index="4" data-flex="false" data-type="string" style="width: auto; min-height: 37px; height: 37px;" class="">喝水</td></tr></tbody></table>
-                </div>
             </div>
         </div>
 
@@ -173,23 +158,15 @@
                     url: "getOrderList.php",
                     datatype: "json",
                     mtype: "POST",
-                    colNames: ["订单编号", "下单日期", "服务名", "预约类型", "原价", "实付款", "状态", "",
-                        "操作", '备注', '用户', "电话", "预约时间", '客户地址'],
+                    colNames: ["编号", "日期", "用户名", "真实姓名", "手机", "", "操作"],
                     colModel: [
-                        {name: "orderNo", editable: true, width: 80},
-                        {name: "ctime", editable: true, width: 50},
-                        {name: "name", width: 40, editable: true, align: "center"},
-                        {name: "isVisitStr", width: 30, editable: true, align: "center"},
-                        {name: "price", width: 30, editable: true, align: "center"},
-                        {name: "amount", width: 30, hidden: false, align: "center", editable: true, edittype: 'text'},
-                        {name: "statusText", width: 50, editable: true, align: "center"},
-                        {name: "actionLoc", viewable: false, width: 30, formatter: "actions"},
-                        {name: "actionBtn", viewable: false, width: 50, sortable: false, formatter: actionFormatrer},
-                        {name: "remark", hidden: true, editable: true, editrules: {edithidden: true}},
-                        {name: "nick", hidden: true, editable: true, editrules: {edithidden: true}},
-                        {name: "tel", hidden: true, editable: true, editrules: {edithidden: true}},
-                        {name: "serviceTime", hidden: true, editable: true, editrules: {edithidden: true}},
-                        {name: "address", hidden: true, editable: true, editrules: {edithidden: true}},
+                        {name: "employee_no", editable: true},
+                        {name: "ctime", editable: true},
+                        {name: "username", editable: true, align: "center"},
+                        {name: "truename", editable: true, align: "center"},
+                        {name: "tel", editable: true, align: "center"},
+                        {name: "actionLoc", viewable: false, formatter: "actions"},
+                        {name: "actionBtn", viewable: false, sortable: false, formatter: actionFormatrer},
                     ],
                     pager: "#pager",
                     rowNum: 10,
@@ -201,6 +178,7 @@
                     autoencode: true,
                     caption: '订单列表',
                     autowidth: true,
+                    shrinkToFit: false,
                     height: 'auto',
                     rownumbers: true,
                     jsonReader: {
