@@ -6,5 +6,11 @@ zui是什么？请看这里：[http://www.zui.sexy/#/](http://www.zui.sexy/#/ "z
 效果图：
 ![麦穗博客](http://blog.rc5j.cn/ueditor/php/upload/image/20151013/1444730499979629.png)
 
-10/13/2015 5:50:33 PM 
-添加jqgrid demo orderlist.html
+10/13/2015 5:50:33 PM
+
+**添加jqgrid demo orderlist.html 和php 数据demo**
+
+12/15/2015 2:40:09 PM
+
+**添加登录页login.html**
+
