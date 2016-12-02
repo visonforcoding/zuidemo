@@ -1,0 +1,79 @@
+/*@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_fza7xor4ez96n7b9.eot');
+  src: url('//at.alicdn.com/t/font_fza7xor4ez96n7b9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_fza7xor4ez96n7b9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_fza7xor4ez96n7b9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_fza7xor4ez96n7b9.svg#iconfont') format('svg');
+}*/
+/*字体图标*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+    html,body{background: #eff0f4;font-family: "微软雅黑";}
+/*颜色*/
+.color_g1{color:#ff7473;}
+.color_g2{color:#47b8e0;}
+.color_g3{color:#ffc952;}
+.color_g4{color:#8fc31f;}
+.color_g5{color:#34314c;}
+.color_g6{color:#247ba0;}
+.content{margin-left:52px;min-height: 1000px;padding-top:50px;}
+.wraper{padding:15px;}
+.cardcontainner{}
+.cardcontainner .card_items .card_href{display:block;background: #fff;border:1px #e0e0e0 solid;height:85px;padding:0 15px;margin-top:15px;}
+.cardcontainner .card_items .iconfont{font-size:56px;position: absolute;line-height: 85px;}
+.cardcontainner .card_items  h3{padding-left:66px;font-size: 24px;color:#33363f;}
+.cardcontainner .card_items  h3 span{display: block;font-size: 14px;line-height: 24px;}
+.viewlistcontent{}
+.viewlistcontent .totalnum{padding-top:60px;}
+.list_items{min-height:435px;margin-top:30px;overflow:hidden;}
+.list_items_left .con,.date_view_list2 .con{background: #fff;min-height:435px;border:1px #e0e0e0 solid;}
+.list_items .con .title,.date_view_list2 .title{background: #f9f9f9;width:100%;height:62px;border-bottom:1px #f2f2f2 solid;line-height: 62px;padding:0 15px 0 25px;font-size: 15px;color:#333;}
+.list_items .con .title .r_info .switch,.date_view_list2 .switch{width:36px;height:16px;background: #b6b6b6;border-radius: 20px;margin:25px 12px 0;position: relative;cursor: pointer;}
+.list_items .con .title .r_info .switch .flag,.date_view_list2 .switch .flag{width:18px;height:18px;border-radius: 50%;background: #626262;position: absolute;left:0;top:-1px;transition:all .2s ease;}
+.list_items .con .title .r_info .switch .change,.date_view_list2 .switch .change{left:18px;transition:all .2s ease;}
+.list_items_right .date_view_items .con{background: #fff;height:202px;margin-bottom:30px;border:1px #e0e0e0 solid;}
+.list_items_right .date_view_items:last-of-type .con{margin-bottom:0px;}
+.list_items_right .con .info p{font-size: 72px;line-height: 130px;}
+@media (min-width: 1200px) and (max-width: 1411px) {
+	.cardcontainner .col-lg-2{width:33.3%;}
+	.viewlistcontent .col-lg-8{width:60%;}
+	.viewlistcontent .col-lg-4{width:40%;}
+}
+@media (min-width: 758px){
+	.list_items_right .date_view_items .mb0{margin-bottom:0;}
+}
+.date_view_list2{min-height: 365px;}
+.date_view_list2 .con{min-height:365px;margin-top:30px;}
+.date_view_list2 .bottomdate{padding:0 10px;}
+.date_view_list2 .arrow{width:12px;height:12px;display: inline-block;border-radius: 50%;background: #ff7473;margin-right:10px;}
+.date_view_list2 .arr_blue{background: #47b8e0;}
+.date_view_list2 .arr_y{background: #ffc952;}
+.date_view_list2 .arr_b{background: #34314c;}
+.date_view_list2 .arr_db{background: #247ba0;}
+.date_view_list2 .arr_qb{background: #70c1b3;}
+.date_view_list2 .arr_z{background: #ae5da1;}
+.date_view_list2 .arr_g{background: #80c269;}
+.date_view_list2 .arr_gray{background: #898989;}
+.date_view_list2 .bottomdate .items{height:30px;}
+.date_view_list2 .bottomdate .btline{border-top:1px #e5e5e5 solid;padding-top:20px;margin:0 15px;}
+.date_view_list2 .flag_r_data{padding-top:60px;}
+.date_view_list2 .flag_data .isDay{height:40px;}
+.date_view_list2 .flag_data .isDay .arrow{margin-right:5px;}
+.flag_r_data .row{margin-right:10px;padding-left:20px;}
+@media (min-width: 1200px) and (max-width: 1270px) {.flag_r_data .row{padding-left:0;}}
+@media (max-width: 1200px) {
+	.date_view_list2 .flag_r_data{padding-top:0px;}
+}

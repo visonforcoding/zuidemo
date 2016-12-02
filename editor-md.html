@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>zui_demo</title>
+    <!-- zui -->
+    <link href="/static/zui/css/zui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/lib/editor.md/css/editormd.min.css" />
+    <link href="/static/zui/lib/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <link href="/static/css/base.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-inverse " role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">zui管理系统</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-collapse-example">
+                <ul class="nav navbar-nav navbar-avatar navbar-right">
+                    <li>
+                        <a href="/shop/order/orderList" class="header-tooltip" style="margin-top:8px;" data-toggle="tooltip" data-placement="bottom"
+                            data-container="body" title="" data-original-title="4条未处理订单">
+                            <i style="font-size: 25px;" class="icon-shopping-cart icon-xlarge text-default"></i>
+                            <b style="display: block;" class="badge badge-notes bg-default count-n">4</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/shop/user/message" class="header-tooltip" style="margin-top:8px;" data-toggle="tooltip" data-placement="bottom"
+                            data-container="body" title="" data-original-title="2条未读信息">
+                            <i style="font-size: 25px;" class="icon-comment-alt icon-xlarge text-default"></i>
+                            <b style="display: block;" class="badge badge-notes bg-danger count-n">2</b>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">曹麦穗
+                                <span class="thumb-small avatar inline">
+                                    <img src="/static/Images/avatar/avatar.jpg" alt="Mika Sokeil" class="img-circle">
+                                </span>
+                                <b class="caret"></b>
+                            </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/shop/index/loginOut.html"><i class="icon icon-off"></i> 注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <!-- / header -->
+    <div id="left-bar" style="width: 200px">
+        <nav class="menu" id="left-menu" data-toggle="menu">
+            <ul class="nav nav-primary">
+                <li><a href="/index.html"><i class="icon-home"></i> 主面板</a></li>
+                <li><a href="#"><i class="icon-user"></i>表格管理</a>
+                    <ul class="nav">
+                        <li >
+                            <a href="jqgrid.html"><i class="icon-shopping-cart"></i>jqgrid列表管理</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="icon-yen"></i>编辑器</a>
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="editor-md.html"><i class="icon-shopping-cart"></i>markdown编辑器</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="icon-dashboard"></i>工作中心</a>
+                    <ul class="nav">
+                        <li>
+                            <a href="orderlist.html"><i class="icon-shopping-cart"></i>订单管理</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="icon-shopping-cart"></i>收银开单</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="icon-line-chart"></i>交易统计</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-comments-alt"></i>评论管理</a>
+                    <ul class="nav">
+
+                    </ul>
+                </li>
+                <li>
+                    <a href=""><i class="icon-tasks"></i> 消息中心
+                            <span class="label label-badge label-danger pull-right">2</span>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main-content">
+        <div id="breadcrumb">
+            <ul class="breadcrumb">
+                <li>
+                    <a href=""><i class="icon icon-home"></i> 主页</a>
+                </li>
+                <li>
+                    <a id="parent-bread" href="#">编辑器</a>
+                </li>
+                <li id="children-bread" class="active">markdown编辑器</li>
+            </ul>
+        </div>
+        <div id="page-content">
+            <div class="page-header">
+                <h1>
+                    editor.md markdown编辑器
+                </h1>
+
+            </div>
+            <div class="col-xs-12 page-body">
+                <div id="editormd" style="min-height:500px;">
+                    <textarea style="display:none;">### Hello Editor.md !
+ ```javascript
+var a = 1;
+console.log(a);
+```
+```php
+$a = "hello,world";
+echo $a;
+```</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 在此处挥洒你的创意 -->
+    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+    <script src="/static/js/jquery.js"></script>
+    <!-- ZUI Javascript组件 -->
+    <script src="/static/zui/js/zui.min.plus.js"></script>
+    <script src="/static/zui/lib/datetimepicker/datetimepicker.min.js"></script>
+    <script src="/static/lib/layer/layer.js"></script>
+    <script>
+            $(function () {
+                $('#left-bar').add('#main-content').height($(window).height() - $('header').height());
+                $('.header-tooltip').tooltip();
+                $('#left-menu ul.nav-primary ul.nav li.active').parents('li').addClass('active show');
+            });
+        </script>
+
+    <script src="/static/lib/editor.md/editormd.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var editor = editormd("editormd", {
+            path : "/static/lib/editor.md/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
+        });
+
+        /*
+        // or
+        var editor = editormd({
+            id   : "editormd",
+            path : "../lib/"
+        });
+        */
+    });
+</script>
+
+</body>
+
+</html>

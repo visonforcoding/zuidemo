@@ -65,19 +65,19 @@
         <div id="left-bar" style="width: 200px">
             <nav class="menu" id="left-menu"  data-toggle="menu" >
                 <ul class="nav nav-primary">
-                    <li><a href="/index.php?/shop/index/index"><i class="icon-home"></i> 主面板</a></li>
-                    <li><a href="#"><i class="icon-user"></i>我的店铺</a>
+                    <li><a href="/index.html"><i class="icon-home"></i> 主面板</a></li>
+                    <li><a href="#"><i class="icon-user"></i>表格管理</a>
                         <ul class="nav">
-                            <li  class="active" >
-                                <a href=""><i class="icon-shopping-cart"></i>menu_1</a>
-                            </li>
-                            <li >
-                                <a href=""><i class="icon-shopping-cart"></i>menu_2</a>
+                            <li>
+                                <a href="jqgrid.html"><i class="icon-shopping-cart"></i>jqgrid列表管理</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="icon-yen"></i>资金管理</a>
+                    <li><a href="#"><i class="icon-yen"></i>编辑器</a>
                         <ul class="nav">
+                            <li>
+                                <a href="editor-md.html"><i class="icon-shopping-cart"></i>markdown编辑器</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="icon-dashboard"></i>工作中心</a>
@@ -122,8 +122,12 @@
             <div id="page-content">
                 <div class="page-header" >
                     <h1>
-                        店铺管理
+                        首页
                     </h1>
+                    <!--<button id="show-user" class="btn btn-primary">查看用户</button>-->
+                </div>
+                <div class="page-body">
+                    首页样式马上来....
                 </div>
             </div>
         </div>
@@ -143,5 +147,18 @@
                 $('#left-menu ul.nav-primary ul.nav li.active').parents('li').addClass('active show');
             });
         </script>
+         <script>
+                $('#show-user').click(function(){
+                       //页面层-自定义
+                    //iframe层-父子操作
+                    layer.open({
+                      type: 2,
+                      area: ['60%', '530px'],
+                      fix: false, //不固定
+                      maxmin: true,
+                      content: 'profile.html'
+                    });
+                });
+         </script>
     </body>
 </html>

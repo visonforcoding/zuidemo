@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>企业后台首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+   	<script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+	<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+	<!--<script src="http://cdn.hcharts.cn/highcharts/themes/gray.js"></script>-->
+	<script src="../js/indexchart.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+  	<div class="content">
+   	<div class="wraper">
+   		<!--第一列小块-->
+   		<div class="row cardcontainner">
+   			<div class="card_items col-lg-2 col-sm-6 col-sm-12">
+   				<div class="card_href">
+   					<i class="iconfont color_g1">&#xe68e;</i>
+   					<h3>员工列表<span>Employee List</span></h3>
+   				</div>
+   			</div>
+   			<div class="card_items col-lg-2 col-sm-6 col-sm-12">
+   				<div class="card_href">
+   					<i class="iconfont color_g2">&#xe68f;</i>
+   					<h3>车辆列表<span>Vehicles List</span></h3>
+   				</div>
+   			</div>
+   			<div class="card_items col-lg-2 col-sm-6 col-sm-12">
+   				<div class="card_href">
+   					<i class="iconfont color_g3">&#xe690;</i>
+   					<h3>订单列表<span>Order List</span></h3>
+   				</div>
+   			</div>
+   			<div class="card_items col-lg-2  col-sm-6 col-sm-12">
+   				<div class="card_href">
+   					<i class="iconfont color_g4">&#xe691;</i>
+   					<h3>调度列表<span>Schedule List</span></h3>
+   				</div>
+   			</div>
+   			<div class="card_items col-lg-2  col-sm-6 col-sm-12">
+   				<div class="card_href">
+   					<i class="iconfont color_g5">&#xe693;</i>
+   					<h3>订单审核<span>Order Review</span></h3>
+   				</div>
+   			</div>
+   			<div class="card_items col-lg-2 col-sm-6 col-sm-12">
+   				<div class="card_href">
+   					<i class="iconfont color_g6">&#xe692;</i>
+   					<h3>地图<span>Map</span></h3>
+   				</div>
+   			</div>
+   		</div>
+   		<!--end-->
+   		<!--第二列-->
+   		<div class="row viewlistcontent">
+   			<div class="list_items list_items_left col-lg-8 col-sm-12">
+   				<div class="con">
+					<div class="title clearfix">
+						<span class="titlename pull-left">订单数量统计</span>
+						<div class="pull-right r_info">
+							<span class="day center-block pull-left">日</span>
+							<div class="switch pull-left" onclick='exchange(this);'><i class="flag"></i></div>
+							<span class="month center-block pull-left">月</span>
+						</div>
+					</div>
+					<div class="info">
+						<div class="row">
+							<div class="col-lg-2 col-md-3 col-sm-2">
+								<h1 class="text-center totalnum"><strong>268</strong></h1>
+								<span class="text-center" style="display: block;">订单总数（包含已取消）</span>
+							</div>
+							<div class="col-lg-10 col-md-9 col-sm-10">
+								<div id="container" style="width:100%;height:300px;"></div>
+							</div>
+							
+						</div>
+					</div>
+   			   </div>
+   			</div>
+   			<div class="list_items list_items_right col-lg-4 col-sm-12">
+   				<div class="row date_view_list">
+   					<div class="date_view_items col-lg-6 col-sm-6 col-sm-12">
+   						<div class="con">
+					<div class="title clearfix">
+						<span class="titlename pull-left">救援总数</span>
+						<div class="pull-right r_info clearfix">
+							<span class="day center-block pull-left">时</span>
+							<div class="switch pull-left" onclick='exchange(this);' data-type='on'><i class="flag"></i></div>
+							<span class="month center-block pull-left">日</span>
+						</div>
+					</div>
+					<div class="info">
+						<p class="text-center"><strog>8</strog></p>
+					</div>
+   			   </div>
+   					</div>
+   					<div class="date_view_items col-lg-6 col-sm-6 col-sm-12">
+   						<div class="con">
+							<div class="title clearfix">
+								<span class="titlename">待调度订单</span>
+							</div>
+							<div class="info">
+								<p class="text-center"><strog>8</strog></p>
+							</div>
+   			   			</div>
+   					</div>
+   					<div class="date_view_items col-lg-6 col-sm-6 col-sm-12">
+   						<div class="con mb0">
+					<div class="title clearfix">
+						<span class="titlename">超过20分钟未回访订单</span>
+					</div>
+					<div class="info">
+						<p class="text-center"><strog>8</strog></p>
+					</div>
+   			   </div>
+   					</div>
+   					<div class="date_view_items col-lg-6 col-sm-6 col-sm-12">
+   						<div class="con mb0">
+					<div class="title clearfix">
+						<span class="titlename">超过2分钟未接受订单</span>
+					</div>
+					<div class="info">
+						<p class="text-center"><strog>8</strog></p>
+					</div>
+   			   </div>
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+<!--end-->
+   		<div class="row date_view_list2">
+   			<div class="l-items-info col-lg-8 col-sm-12">
+   				<div class="row">
+   					<div class="l-info-view col-lg-4 col-sm12">
+   						<div class="con">
+							<div class="title clearfix">
+								<span class="titlename pull-left">司机状态</span>
+							</div>
+							<div class="info">
+								<div id="driver" style="width:100%;height:200px;"></div>
+								<div class="bottomdate">
+									<div class="btline">
+									<div class="row">
+										<div class="items col-lg-6 col-sm-6 col-sm-12"><span class="pull-left"><i class="arrow"></i>忙碌</span> <span class="pre pull-right">50%</span></div>
+										<div class="items col-lg-6 col-sm-6 col-sm-12"><span class="pull-left"><i class="arrow arr_blue"></i>空闲</span> <span class="pre pull-right">50%</span></div>
+										<div class="items col-lg-6 col-sm-6 col-sm-12"><span class="pull-left"><i class="arrow arr_y"></i>下线</span> <span class="pre pull-right">50%</span></div>
+									</div>
+									</div>
+								</div>
+							</div>
+		   			   	</div>
+   					</div>
+   					<div class="l-info-view col-lg-8 col-sm12">
+   						<div class="con">
+							<div class="title clearfix">
+								<span class="titlename pull-left">各救援比例</span>
+								<div class="pull-right r_info">
+									<span class="day center-block pull-left">日</span>
+									<div class="switch pull-left" onclick='exchange(this);'><i class="flag"></i></div>
+									<span class="month center-block pull-left">月</span>
+								</div>
+							</div>
+							<div class="info">
+								<div class="row">
+									<div class="flag_data col-lg-5 col-sm-12">
+										<div id="flagDay" style="width:100%;height:300px;"></div>
+									</div>
+									<div class="flag_data flag_r_data col-lg-7 col-sm-12">
+										<div class="row" >
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow"></i>拖车救援</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_blue"></i>换胎救援</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_y"></i>搭电救援</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_b"></i>困境救援</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_db"></i>紧急加水</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_qb"></i>现场抢修</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_z"></i>充气救援</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_g"></i>地库救援</span><span class="pull-right">30%</span></div>
+											</div>
+											<div class="isDay col-lg-6 col-sm-6 col-sm-12">
+												<div><span class="pull-left"><i class="arrow arr_gray"></i>其它</span><span class="pull-right">30%</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+		   			   	</div>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="l-items-info col-lg-4 col-sm-12">
+   				<div class="con">
+					<div class="title clearfix">
+						<span class="titlename pull-left">过去六个月营收</span>
+					</div>
+					<div class="info">
+						<div id="cash" style="width:100%;height:250px;"></div>
+					</div>
+   			   </div>
+   			</div>
+   		</div>
+   		
+   	</div>
+   		</div>
+   		<script type="text/javascript">
+   			
+		</script>
+  </body>
+</html>
