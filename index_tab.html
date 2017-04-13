@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>zui_demo</title>
+        <!-- zui -->
+        <link href="/static/zui/css/zui.min.css" rel="stylesheet">
+        <link href="/static/zui/lib/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+        <link href="/static/css/base.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-inverse " role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">zui管理系统</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-collapse-example">
+                    <ul class="nav navbar-nav navbar-avatar navbar-right">
+                        <li>
+                            <a href="/shop/order/orderList" class="header-tooltip"  style="margin-top:8px;" data-toggle="tooltip"
+                               data-placement="bottom" data-container="body" title="" data-original-title= "4条未处理订单">
+                                <i style="font-size: 25px;" class="icon-shopping-cart icon-xlarge text-default"></i>
+                                <b style="display: block;" class="badge badge-notes bg-default count-n">4</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/shop/user/message" class="header-tooltip" style="margin-top:8px;" data-toggle="tooltip"
+                               data-placement="bottom" data-container="body" title="" data-original-title= "2条未读信息">
+                                <i  style="font-size: 25px;" class="icon-comment-alt icon-xlarge text-default"></i>
+                                <b style="display: block;" class="badge badge-notes bg-danger count-n">2</b>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">曹麦穗
+                                <span class="thumb-small avatar inline">
+                                    <img src="/static/Images/avatar/avatar.jpg" alt="Mika Sokeil" class="img-circle">
+                                </span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/shop/index/loginOut.html"><i class="icon icon-off"></i> 注销</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </header>
+        <!-- / header -->
+        <div id="left-bar" style="width: 200px">
+            <nav class="menu" id="left-menu"  data-toggle="menu" >
+                <ul class="nav nav-primary">
+                    <li><a href="/index.html"><i class="icon-home"></i> 主面板</a></li>
+                    <li><a href="#"><i class="icon-user"></i>表格管理</a>
+                        <ul class="nav">
+                            <li>
+                                <a href="jqgrid.html"><i class="icon-shopping-cart"></i>jqgrid列表管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon-yen"></i>编辑器</a>
+                        <ul class="nav">
+                            <li>
+                                <a href="editor-md.html"><i class="icon-shopping-cart"></i>markdown编辑器</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="icon-dashboard"></i>工作中心</a>
+                        <ul class="nav">
+                            <li >
+                                <a href="orderlist.html"><i class="icon-shopping-cart"></i>订单管理</a>
+                            </li>
+                            <li class="menu-tab-link" data-href="www.baidu.com">
+                                <a href=""><i class="icon-shopping-cart"></i>百度</a>
+                            </li>
+                            <li >
+                                <a href=""><i class="icon-line-chart"></i>交易统计</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-comments-alt"></i>评论管理</a>
+                        <ul class="nav">
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon-tasks"></i> 消息中心
+                            <span class="label label-badge label-danger pull-right">2</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main-content">
+            <div id="page-content">
+                <ul id="tab-bar" class="nav nav-tabs">
+                    <li class="active"><a data-tab href="#tabContent1">标签1<span><i class="tab-action icon icon-times"></i></span></a></li>
+                    <li><a data-tab href="#tabContent2">标签2</a></li>
+                    <li><a data-tab href="#tabContent3">标签3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabContent1">
+                        <p>我是标签1。</p>
+                    </div>
+                    <div class="tab-pane" id="tabContent2">
+                        <p>标签2的内容。</p>
+                    </div>
+                    <div class="tab-pane" id="tabContent3">
+                        <p>这是标签3的内容。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 在此处挥洒你的创意 -->
+        <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+        <script src="/static/js/jquery.js"></script>
+        <!-- ZUI Javascript组件 -->
+        <script src="/static/zui/js/zui.min.plus.js"></script>
+        <script src="/static/zui/lib/datetimepicker/datetimepicker.min.js"></script>
+        <script src="/static/lib/layer/layer.js"></script>
+        <script>
+            $(function () {
+                $('#left-bar').add('#main-content').height($(window).height() - $('header').height());
+                $('.header-tooltip').tooltip();
+                $('#left-menu ul.nav-primary ul.nav li.active').parents('li').addClass('active show');
+
+                //标签页
+                $('#tab-bar li').on('click',function(){
+                    $('#tab-bar li').removeClass('active');
+                    $(this).addClass('active');
+                    var target = $(this).find('a').attr('href');
+                    $('.tab-pane').removeClass('active');
+                    $(target).addClass('active');
+                    $(target).show();
+                    //$('#myTabLink').tab('show');
+                });
+                $('.tab-pane').on('shown.zui.tab', function (e) {
+                    console.log('当前被激活的标签页', e.target);
+                    console.log('上一个标签页', e.relatedTarget);
+                });
+                $('.tab-action').bind('click',function(event){
+                     var target = $(this).parents('li').find('a').attr('href');
+                       $(this).parents('li').next('li').addClass('active');
+                       $(this).parents('li').remove();
+                       $(target).remove();
+                       $(target).next('div').addClass('active');
+                       console.log('test');
+                       event.preventDefault(); 
+                });
+                $('.menu-tab-link').on('click',function(){
+                    var link = $(this).data('link');
+                });
+            });
+        </script>
+        <script>
+            $('#show-user').click(function () {
+                //页面层-自定义
+                //iframe层-父子操作
+                layer.open({
+                    type: 2,
+                    area: ['60%', '530px'],
+                    fix: false, //不固定
+                    maxmin: true,
+                    content: 'profile.html'
+                });
+            });
+        </script>
+    </body>
+</html>
