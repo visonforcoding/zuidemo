@@ -85,8 +85,8 @@
                             <li >
                                 <a href="orderlist.html"><i class="icon-shopping-cart"></i>订单管理</a>
                             </li>
-                            <li class="menu-tab-link" data-href="www.baidu.com">
-                                <a href=""><i class="icon-shopping-cart"></i>百度</a>
+                            <li data-title="百度" class="menu-tab-link" data-link="http://www.baidu.com">
+                                <a><i class="icon-shopping-cart"></i>百度</a>
                             </li>
                             <li >
                                 <a href=""><i class="icon-line-chart"></i>交易统计</a>
@@ -114,7 +114,7 @@
                     <li><a data-tab href="#tabContent2">标签2</a></li>
                     <li><a data-tab href="#tabContent3">标签3</a></li>
                 </ul>
-                <div class="tab-content">
+                <div id="main-body" class="tab-content">
                     <div class="tab-pane active" id="tabContent1">
                         <p>我是标签1。</p>
                     </div>
@@ -140,9 +140,12 @@
                 $('#left-bar').add('#main-content').height($(window).height() - $('header').height());
                 $('.header-tooltip').tooltip();
                 $('#left-menu ul.nav-primary ul.nav li.active').parents('li').addClass('active show');
-
+                $(window).bind('resize', function () {
+                    $('#left-bar').add('#main-content').height($(window).height() - $('header').height());
+                });
                 //标签页
-                $('#tab-bar li').on('click',function(){
+                $('#tab-bar').on('click', 'li', function () {
+                    console.log('我被电击了');
                     $('#tab-bar li').removeClass('active');
                     $(this).addClass('active');
                     var target = $(this).find('a').attr('href');
@@ -155,17 +158,25 @@
                     console.log('当前被激活的标签页', e.target);
                     console.log('上一个标签页', e.relatedTarget);
                 });
-                $('.tab-action').bind('click',function(event){
-                     var target = $(this).parents('li').find('a').attr('href');
-                       $(this).parents('li').next('li').addClass('active');
-                       $(this).parents('li').remove();
-                       $(target).remove();
-                       $(target).next('div').addClass('active');
-                       console.log('test');
-                       event.preventDefault(); 
+                $('#tab-bar').on('click', '.tab-action', function (event) {
+                    console.log($(this));
+                    var target = $(this).parents('li').find('a').attr('href');
+                    $(this).parents('li').next('li').addClass('active');
+                    console.log($(this).parents('li').next('li'));
+                    $(this).parents('li').remove();
+                    $(target).remove();
+                    $(target).next('div').addClass('active');
+                    console.log('test');
+                    //event.preventDefault();
+                    return false;
                 });
-                $('.menu-tab-link').on('click',function(){
+                $('.menu-tab-link').on('click', function () {
                     var link = $(this).data('link');
+                    var title = $(this).data('title');
+                    $('#tab-bar li').removeClass('active');
+                    $('.tab-pane').removeClass('active');
+                    $('#tab-bar').append('<li class="active"><a data-tab href="#' + title + '">' + title + '<span><i class="tab-action icon icon-times"></i></span></a></li>');
+                    $('#main-body').append('<div class="tab-pane active" id="' + title + '"><iframe src="'+link+'" width="100%" height="100%"></iframe></div>');
                 });
             });
         </script>
